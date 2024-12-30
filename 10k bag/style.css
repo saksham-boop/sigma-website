@@ -157,7 +157,7 @@ body {
 .carousel .slide {
     display: inline-block;
     padding: 0 20px;
-    animation: scroll 20s linear infinite alternate;
+    animation: scroll 30s linear infinite alternate;
 }
 
 .carousel img {
@@ -206,4 +206,13 @@ footer {
 .dropdown:hover .dropdown-menu {
 display: block;
 max-height: 500px; /* Adjust according to the height of your dropdown */
+}
+
+#rounded {
+    border-radius: 30px;
+    border: 1px solid #ccc;
+}
+img:not(#rounded) {
+    border-radius: 10px;
+    border: 1px solid #ccc;
 }
