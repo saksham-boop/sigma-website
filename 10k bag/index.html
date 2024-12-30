@@ -1,1046 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description"
-          content="Learn Programming and Data Science with opportunity to get a Bachelor’s Degree (BS or BSc based on credits completed) or Diploma (Programming or Data Science) from IIT Madras upon successfully completing required courses. First of its kind undergraduate program that leverages the ease of web-enabled learning." />
-      <meta property="og:title" content="IIT Madras Degree Program in Data Science and Applications">
-      <meta property="og:description"
-          content="Learn Programming and Data Science with opportunity to get a Bachelor’s Degree (BS or BSc based on credits completed) or Diploma (Programming or Data Science) from IIT Madras upon successfully completing required courses. First of its kind undergraduate program that leverages the ease of web-enabled learning.">
-      <meta property="og:image" content="https://study.iitm.ac.in/assets/img/socialmedia_card.jpg">
-      <meta property="og:url" content="https://study.iitm.ac.in/">
-      <link rel="apple-touch-icon" sizes="76x76" href="https://study.iitm.ac.in/ds/assets/img/logo.ico">
-      <link rel="icon" href="https://study.iitm.ac.in/ds/assets/img/logo.ico">
-      <title>IIT Madras Degree Program in Data Science and Applications</title>
-      <!--     Fonts and icons     -->
-      <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
-          rel="stylesheet">
-      <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IITM - Inspired by Excellence</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      <!-- Nucleo Icons -->
-      <link rel="stylesheet" href="https://study.iitm.ac.in/ds/assets/css/nucleo-icons.css">
-      <link rel="stylesheet" href="https://study.iitm.ac.in/ds/assets/css/nucleo-svg.css">
-      <!-- Font Awesome Icons -->
-      <link rel="stylesheet" href="https://study.iitm.ac.in/ds/assets/css/font-awesome.css">
-      <link rel="stylesheet" href="https://study.iitm.ac.in/ds/assets/css/nucleo-svg.css">
-      <!-- CSS Files -->
-      <link rel="stylesheet" href="https://study.iitm.ac.in/ds/assets/css/argon-design-system.css?v=1.2.0">
-      <link rel="stylesheet" href="https://study.iitm.ac.in/ds/assets/css/index.css">
-      <!-- Carousel CSS-->
-      <link rel="stylesheet" href="https://study.iitm.ac.in/ds/assets/css/cb37c4bf64c4b105.css">
-      <link rel="stylesheet" href="https://study.iitm.ac.in/ds/assets/css/cbda34642e2d05e0.css">
-      <link rel="stylesheet" href="https://study.iitm.ac.in/ds/assets/css/42801df8a9137166.css">
-      
-      <link rel="stylesheet" href="carousel.css">
-      
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #f1f1f1;
+            background-color: #1e1e2f;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #2c2c3a; 
+            color: white;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #d1d1e0;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #9d7fe5;
+        }
+
+        .navbar ul li:hover > ul {
+            display: block;
+        }
+
+        .navbar ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2c2c3a;
+            color: #f1f1f1;
+            list-style: none;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar ul li ul li {
+            margin: 5px 0;
+        }
+
+        .navbar ul li ul li a {
+            color: #d1d1e0;
+        }
+
+        .navbar ul li ul li a:hover {
+            color: #9d7fe5;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(to bottom, #3a3a4f, #2c2c3a);
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e1e1f1;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .section {
+            padding: 2rem;
+            text-align: center;
+            background-color: #2c2c3a;
+            margin: 2rem auto;
+            border-radius: 10px;
+            color: #f1f1f1;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        .section h2 {
+            color: #9d7fe5;
+        }
+
+        .section p {
+            margin-top: 1rem;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Sponsor Carousel */
+        .carousel {
+            background-color: #1e1e2f;
+            padding: 1rem 0;
+            overflow: hidden;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .carousel .slide {
+            display: inline-block;
+            padding: 0 20px;
+            animation: scroll 10s linear infinite;
+        }
+
+        .carousel img {
+            height: 50px;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c3a;
+            color: #f1f1f1;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
 </head>
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-navbar">
-        <a class="navbar-brand mr-lg-5 pl-3" href="index.html">
-          <img
-            style="height: 58px"
-            src="https://study.iitm.ac.in/ds/assets/img/IITMOD-Logo.svg"
-            alt="IIT Madras BS Degree Program"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbar-default"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-default">
-          <div class="navbar-collapse-header">
-            <div class="row">
-              <div class="col-6 collapse-brand">
-                <a href="index.html">
-                  <img src="https://study.iitm.ac.in/ds/assets/img/logo.png" />
-                </a>
-              </div>
-              <div class="col-6 collapse-close">
-                <button
-                  type="button"
-                  class="navbar-toggler"
-                  data-toggle="collapse"
-                  data-target="#navbar-default"
-                  aria-controls="navbar-default"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span></span>
-                  <span></span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <ul class="navbar-nav ml-lg-auto">
-            <li class="nav-item mr-0 dropdown">
-              <a
-                class="nav-link"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                style="font-weight: 600"
-              >
-                
-                  Academics
-                
-                <i class="fas fa-angle-down"></i>
-              </a>
-              <div
-                class="dropdown-menu dropdown-menu-left"
-                aria-labelledby="navbar-default_dropdown_1"
-              >
-                <a class="dropdown-item" href="academics.html#AC1"
-                  >Overall Structure</a
-                >
-                <a class="dropdown-item" href="academics.html#AC2"
-                  >Term Structure</a
-                >
-                <a class="dropdown-item" href="academics.html#AC3"
-                  >Course Registrations
-                </a>
-                <a class="dropdown-item" href="academics.html#AC4"
-                  >Assessments</a
-                >
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="academics.html#AC9"
-                  >Exam Cities</a
-                >
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="academics.html#AC10"
-                  >Fee Structure</a
-                >
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="academics.html#AC11"
-                  >Foundation Level</a
-                >
-                <a class="dropdown-item" href="academics.html#AC12"
-                  >Diploma Level</a
-                >
-                <a class="dropdown-item" href="academics.html#AC15"
-                  >BSc Degree Level</a
-                >
-                <a class="dropdown-item" href="academics.html#AC16"
-                  >BS Degree Level</a
-                >                
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="academics.html#AC17"
-                  >Sample Certificates</a
-                >
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="academic_calendar.html"
-                  >Academic Calendar</a
-                >
-              </div>
-            </li>
-            <li class="nav-item mr-0 dropdown">
-              <a
-                class="nav-link"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                style="font-weight: 600"
-                > 
-                
-                  Admissions 
-                
-                <i class="fas fa-angle-down"></i>
-              </a>
-              <div
-                class="dropdown-menu dropdown-menu-left"
-                aria-labelledby="navbar-default_dropdown_1"
-              >
-                <a class="dropdown-item" href="admissions.html#AD0"
-                  >Important Dates</a
-                >
-                <a class="dropdown-item" href="admissions.html#AD1"
-                  >Mandatory Requirements</a
-                >
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="admissions.html#AD4">Eligibility to Apply</a>
-                <a class="dropdown-item" href="admissions.html#AD5">Application Process</a>
-                <a class="dropdown-item" href="admissions.html#AD6">Admission to the Foundation Level</a>
-                <i><a class="dropdown-item" href="admissions.html#AD7">1. Regular Entry
-                  </a></i>
-                <i><a class="dropdown-item" href="admissions.html#AD8">2. JEE-based Entry
-                  </a></i>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="admissions.html#AD9">International Students</a>
-              </div>
-            </li>
-            <li class="dropdown nav-item mr-0">
-              <a
-                class="nav-link"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                style="font-weight: 600"
-              >
-                
-                  Resources 
-                
-                <i class="fas fa-angle-down"></i>
-              </a>
-              <div
-                class="dropdown-menu dropdown-menu-left"
-                aria-labelledby="navbar-default_dropdown_1"
-              >
-                <a class="dropdown-item" href="helpvideos.html">Help Videos</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="inthemedia.html">In the Media</a>
-                <a class="dropdown-item" href="archive.html">Archive</a>
-              </div>
-            </li>
-            <li class="dropdown nav-item mr-0">
-              <a class="nav-link" role="button" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false" style="font-weight: 600;">
-              
-                Student Life
-              
-              <i class="fas fa-angle-down"></i>
-              </a>
-                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbar-default_dropdown_1">
-                    <a class="dropdown-item" href="student_life.html">Student Houses & Societies</a>
-                    <a class="dropdown-item" href="https://sites.google.com/ds.study.iitm.ac.in/paradox-23/home" target="_blank">PARADOX / Student Festivals</a>
-                    
-                </div>
-            </li>
-            <li class="nav-item mr-0">
-              <a
-                class="nav-link"
-                style="font-weight: 600"
-                href="https://school-connect.study.iitm.ac.in/"
-                target="_blank"
-              >
-              School Connect
-              </a>
-            </li>
-            <li class="dropdown nav-item mr-0">
-              <a
-                class="nav-link"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                style="font-weight: 600"
-              >
-                
-                Achievements 
-                
-                <i class="fas fa-angle-down"></i>
-              </a>
-              <div
-                class="dropdown-menu dropdown-menu-left"
-                aria-labelledby="navbar-default_dropdown_1"
-              >
-                <div class="dropdown-item">Recognition</div>
-                <a class="dropdown-item" style="padding-left: 30px;" href="https://study.iitm.ac.in/student-achievements/toppers" target="_blank">1. Toppers Page</a>
-                <a class="dropdown-item" style="padding-left: 30px;" href="https://study.iitm.ac.in/student-achievements/projects" target="_blank">2. Student's Best Projects</a>
-                <a class="dropdown-item" style="padding-left: 30px;" href="https://study.iitm.ac.in/student-achievements/interns" target="_blank">3. Teaching Assistance</a>
-                <a class="dropdown-item" style="padding-left: 30px;" href="https://study.iitm.ac.in/student-achievements/alumni" target="_blank">4. Alumni</a>
-
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="testimonials.html">Testimonials</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://sites.google.com/ds.study.iitm.ac.in/booksandpublications/home" target="_blank">Research and Publication</a>
-              </div>
-            </li>
-            <li class="nav-item mr-0">
-              <a
-                class="nav-link"
-                style="font-weight: 600"
-                href="events.html"
-              >
-                
-                Events
-                
-              </a>
-            </li>
-
-            <li class="nav-item mr-0">
-              <a class="nav-link" style="font-weight: 600" href="faq.html">
-                
-                
-                FAQ
-                
-              </a>
-            </li>
-            <li class="dropdown nav-item mr-0">
-              <a
-                class="nav-link"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                style="font-weight: 600"
-              >
-                
-                About IITM
-                
-                <i class="fas fa-angle-down"></i>
-              </a>
-              <div
-                class="dropdown-menu dropdown-menu-left"
-                aria-labelledby="navbar-default_dropdown_1"
-              >
-                <a class="dropdown-item" href="aboutIITM.html">About IIT Madras</a>
-                <a class="dropdown-item" href="aboutIITM.html#FC">Faculty Co-ordinators</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="aboutIITM.html#footer">Contact Us</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" target="_blank" href="https://podgoodies.iitmadrasonline.in/">Merchandise</a>
-                
-              </div>
-            </li>
-            <li class="nav-item mr-0">
-              <a
-                class="nav-link"
-                style="font-weight: 600"
-                href="partnerships.html"
-              >
-                  Partnerships
-              </a>
-            </li>
-
-            <li class="nav-item mr-0">
-              <a
-                class="nav-link"
-                style="font-weight: 600"
-                href=" https://study.iitm.ac.in/ds/placements/"
-                target="_blank"
-              >
-                Placements
-              </a>
-            </li>
-            <li class="nav-item mr-0">
-              <a
-                class="nav-link text-decoration-none"
-                href="https://ds.study.iitm.ac.in/auth/login"
-                ><button class="btn btn-sm btn-outline-default">
-                  SIGN IN
-                </button></a
-              >
-            </li>
-          </ul>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://via.placeholder.com/50" alt="IITM Logo">
+            <span>IITM</span>
         </div>
-      </nav>
-      <!-- End Navbar -->
-      
+        <ul>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Resources</a>
+                <ul>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Labs</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Student Life</a></li>
+            <li><a href="#">School Connect</a></li>
+            <li><a href="#">Achievements</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">About IITM</a></li>
+            <li><a href="#">Partnerships</a></li>
+            <li><a href="#">Placements</a></li>
+        </ul>
+    </nav>
 
-      <!-- notifications -->
-      <div id="notification" class="xl+notification">
-        <div class="d-md-flex justify-content-center text-highlights">
-          
-                <div class="text-lighter notificationText mr-2">
-                Applicationsdd Open now for January 2025 Batch | Applications Close: January 02, 2025 | Exam: February 23, 2025
-                </div>
-                <a class="text-decoration-none notification_apply_now" target="_blank"
-                     href="https://ds.study.iitm.ac.in/auth/login?apply_qualifier=true">
-                     <button class="btn btn-sm btn-light">APPLY NOW</button>
-                </a>
-
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Welcome to IITM</h1>
+            <p>Excellence in Education, Research, and Innovation</p>
         </div>
-      </div>
-      <!-- end-notifications -->
+    </section>
+
+    <!-- Additional Sections -->
+    <div class="section">
+        <h2>Our Vision</h2>
+        <p>To create a nurturing environment for innovation and research.</p>
     </div>
-    <!-- scrollToTop -->
-    <button
-      id="scrollToTop"
-      onclick="scrollToTop();"
-      class="scrollToTop bg-primary shadow-lg--hover"
-    >
-      <i class="fa fa-chevron-up" aria-hidden="true"></i>
-    </button>
 
-    
-    <!-- Content -->
-    <div id="mainContent">
-        <div class="container-md  w-100 pt-1" style="margin-right: 0!important;">
-            <div class="container-fluid pr-3 d-none d-md-block mb-5" style="margin-right: 0!important;">
-            <div class="d-flex justify-content-end">
-            </div>
-        </div>
-    <section class="container">
-      <div class="mb-3 row justify-content-center align-items-center">
-          <div class="col-sm-12 col-md-3 row">
-            <div class="slideshow-container1 landingVideo mb-4 mb-md-2 col-12 pr-md-0">
-              <div class="mySlides1 fade1">
-                <iframe  loading="auto" class="youtube-video" width="360" height="315" src="https://www.youtube.com/embed/lEMtlAqlJww?enablejsapi=1&version=3&playerapiid=ytplayer" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>                  
-              </div>
-              <div class="mySlides1 fade1" id="youtube-video">
-                <iframe  loading="auto" class="youtube-video" width="360" height="315" src="https://www.youtube.com/embed/b0wrLw-Qyl0?enablejsapi=1&version=3&playerapiid=ytplayer" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                      allowfullscreen></iframe>                  
-              </div>  
-              <div class="mySlides1 fade1">
-                          <iframe loading="auto" class="youtube-video" width="360" height="315" src="https://www.youtube.com/embed/VeNHdAPH-9A?enablejsapi=1&version=3&playerapiid=ytplayer" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen></iframe>                  
-              </div>            
-            </div>                                               
-              <a class="prev stop-video" style="color: white;" onclick="plusSlides1(-1)"><i class="fa fa-chevron-circle-left" style="font-size:50px;"></i></a>
-              <a class="next stop-video" style="color: white;" onclick="plusSlides1(1)"><i class="fa fa-chevron-circle-right" style="font-size:50px;"></i></a>                        
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                  
-                             
-                       
-                <span class="dot1"  onclick="currentSlide1(1)"></span> 
-                <span class="dot1"  onclick="currentSlide1(2)"></span> 
-                <span class="dot1"  onclick="currentSlide1(3)"></span>                    
-            </div>        
-            <div class="col-sm-12 col-md-9 d-flex align-items-normal">
-              <div>                 
-                <p class="directorText font-weight-500" style="color:#A0332D !important;font-size: 1.1rem!important;"><b>
-                    IIT Madras, India's top technical institute, welcomes you to the <span class="text-secondary">world's first 4-year Bachelor of Science (BS) Degree in Data Science and Applications</span> with options to exit earlier in the foundation, diploma or BSc degree level.<br> 
-                    </b>
-                </p>
-                <br>
-                <p class="directorText font-weight-500">
-                    For the first time, you can work towards an undergraduate degree / diploma from an IIT regardless of your age, location, or academic backgrounds.<br>More than 29000 students currently studying with us in the program. 
-                </p>
-                <p class="directorText font-weight-500 blink"style="color: #2d38be;">
-                <a target="_blank" href="admissions.html#AD4" style="font-size: 0.9rem;">
-                       For more details<img style="width: 7%" src="assets/img/homepage/new.png">       
-                </a>  
-                <a target="_blank" href="academics.html#AC10" style="font-size: 0.9rem;" class="blink">
-                    For Fee structure
-                </a><img style="width: 7%" src="assets/img/homepage/new.png">
-               </p>
-              </div>
-            </div>
-          </div>               
-        </section>
-      <section class="container">
-        <div class="PagesCards_root__iXKCO">
-          <div class="PageCard_root__d75uq" style="background-color:#ea6262;color:#1A325D">
-            <div class="PageCard_title__Riwz1 ">
-              <p class="fontag2" style="color:#D6A64F ; text-align: center!important;">20,000+</p>
-            </div>
-            <div class="PageCard_content__jseS2">
-              <p class="fontag3" style="color:#D6A64F;text-align: center;">Students doing this program along with another degree </p>
-            </div>
-          </div>
-          <div class="PageCard_root__d75uq" style="background-color:#d04949;color:#FFFFFF">
-            <div class="PageCard_title__Riwz1 ">
-              <p class="fontag2" style="color:#D6A64F ;text-align: center!important;">3000+ </p>
-            </div>
-            <div class="PageCard_content__jseS2">
-              <p class="fontag3" style="color:#D6A64F;text-align: center;">Working Professionals studying in the program</p>
-            </div>
-          </div>
-          <div class="PageCard_root__d75uq" style="background-color:#ae3f3f;color:#FFFFFF">
-            <div class="PageCard_title__Riwz1 ">
-              <p class="fontag2" style="color:#D6A64F;text-align: center!important;">850+</p>
-            </div>
-            <div class="PageCard_content__jseS2">
-              <p class="fontag3" style="color:#D6A64F;text-align: center;">Secured Admission to Masters/PhD programs within and outside India</p>
-            </div>
-          </div>
-          <div class="PageCard_root__d75uq" style="background-color:#a52a2a;color:#FFFFFF">
-            <div class="PageCard_title__Riwz1 ">
-              <p class="fontag2" style="color:#D6A64F;text-align: center!important;">20+</p>
-            </div>
-            <div class="PageCard_content__jseS2">
-              <p class=    <!-- End Latest updates section -->
-    
-                <!-- defining video modals -->"fontag3" style="color:#D6A64F;text-align: center;">BS students in Top 100 Ranks of GATE Exam 2024</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <br><br>
-      <section class="container">
-        <div class="container">
-          <div class="grid lg:grid-cols-4 lg:gap-x-20 gap-y-12 lg:gap-y-10">
-            <div  class="font-raleway iit_item__pvzfz iit_centerdItem__WF7S_" style="text-align: center;">
-              <img src="assets/img/homepage/CupIcon-01.png" class="iit_img__pMXAt w-[71px]"/>
-              <div class="text-blu iit_title__ZsmJX">
-                <p class="fontag3">Best Online Program 
-                </p>
-              </div>
-              <p class="directorText font-weight-500" style="font-size: 1.0rem!important;">Awarded by <span class="text-secondary">QS Reimagine Education & The Wharton School, University of Pennsylvania</span></p>
-            </div>
-            <div class="font-raleway iit_item__pvzfz iit_centerdItem__WF7S_" style="text-align: center;">
-              <img src="assets/img/homepage/Group_48099322_3_8285f11c85.png" class="iit_img__pMXAt w-[71px]"/>
-              <div class="text-blu iit_title__ZsmJX">
-                <p class="fontag3">Scholarship
-                </p>
-              </div>
-              <p class="directorText font-weight-500" style="font-size: 1.0rem!important;">Learners from < 5LPA eligible for up to 75% fee waivers. 2000+ students study for free</p>
-            </div>
-            <div class="font-raleway iit_item__pvzfz iit_centerdItem__WF7S_" style="text-align: center;">
-              <img src="assets/img/homepage/Group_48099322_4_38c933a489.png" class="iit_img__pMXAt w-[71px]"/>
-              <div class="text-blu iit_title__ZsmJX">
-                <p class="fontag3">No Age Limit
-                </p>
-              </div>
-              <p class="directorText font-weight-500" style="font-size: 1.0rem!important;">Learners from any age and any where in the world can study in this program. Current age of learners : 17 to 81 years.
-              </p>
-            </div>
-            <div class="font-raleway iit_item__pvzfz iit_centerdItem__WF7S_" style="text-align: center;">
-              <img src="assets/img/homepage/Group_48099322_5_83d4ff011f.png" class="iit_img__pMXAt w-[71px]"/>
-              <div class="text-blu iit_title__ZsmJX">
-                <p class="fontag3">Mode of Study
-                </p>
-              </div>
-              <p class="directorText font-weight-500" style="font-size: 1.0rem!important;">Pre-recorded and synchronous sessions, Weekly Online Assignments, In-person quizzes</p>
-            </div>
-          </div>
-        </div>
-        <br>
-        <div class="container">
-          <div class="grid lg:grid-cols-4 lg:gap-x-20 gap-y-12 lg:gap-y-10">
-            <div  class="font-raleway iit_item__pvzfz iit_centerdItem__WF7S_" style="text-align: center;">
-              <img src="assets/img/homepage/Group_48099322_7_b4ea241570.png" class="iit_img__pMXAt w-[71px]"/>
-              <div class="text-blu iit_title__ZsmJX">
-                <p class="fontag3">Data science Courses
-                </p>
-              </div>
-              <p class="directorText font-weight-500" style="font-size: 1.0rem!important;">ML Foundations, Deep Learning, Reinforcement Learning, Computer Vision, LLMs, Big Data</p>
-            </div>
-            <div class="font-raleway iit_item__pvzfz iit_centerdItem__WF7S_" style="text-align: center;">
-              <img src="assets/img/homepage/Group_480993225_0ff191809a.png" class="iit_img__pMXAt w-[71px]"/>
-              <div class="text-blu iit_title__ZsmJX">
-                <p class="fontag3">Programming Courses
-                </p>
-              </div>
-              <p class="directorText font-weight-500" style="font-size: 1.0rem!important;">Python, Java, PostGreSQL, Linux commands, C programming, Full Stack Application Development</p>
-            </div>
-            <div class="font-raleway iit_item__pvzfz iit_centerdItem__WF7S_" style="text-align: center;">
-              <img src="assets/img/homepage/Group_4809932223_9dc8a46ff8.png" class="iit_img__pMXAt w-[71px]"/>
-              <div class="text-blu iit_title__ZsmJX">
-                <p class="fontag3">Frameworks and Libraries
-                </p>
-              </div>
-              <p class="directorText font-weight-500" style="font-size: 1.0rem!important;">Flask, Vue, NumPy, Scikitlearn, Pytorch, OpenCV, Kafka and many more relevant for Data Science applications 
-              </p>
-            </div>    <!-- End Latest updates section -->
-    
-            <!-- defining video modals -->
-            <div class="font-raleway iit_item__pvzfz iit_centerdItem__WF7S_" style="text-align: center;">
-              <img src="assets/img/homepage/Group_480993225_bc30ee109b.png" class="iit_img__pMXAt w-[71px]"/>
-              <div class="text-blu iit_title__ZsmJX">
-                <p class="fontag3">Business Courses
-                </p>
-              </div>
-              <p class="directorText font-weight-500" style="font-size: 1.0rem!important;"> Business Data Management, Business Analytics, Tools in Data Science, Financial Forensics, Market Research, Managerial Economics </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="container">
-        <div class="mb-3 row justify-content-center align-items-center">
-          <div class="slider_1">
-            <div class="slide_1-track-1">
-              <div class="slide_1"><img src="assets/img/companylogo/ABP Network.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Aditya Birla.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Amazon.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Applied Materials.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Bharat Forge.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Capgemini.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Cargill.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Cisco.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Cognizant.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Course5i.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Delhivery.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Deloitte.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/DRDO.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Dun & Bradstreet.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Ecolab.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Epsilon.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Ernst and Young.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Ford Motor.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Gavs Technology.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Genpact.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/HCL Tech.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/HP.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Indian Oil Corporation.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Intel Corporation.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/L&T.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Latentview Analytics.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Logitech.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Lowes India.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Marlabs.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Medi Assist.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Microsoft.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Myntra.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Natwest Group.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Oracle.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Pidilite Industries Limited.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Rakuten India.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/sabio_logo.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Saint Gobain.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Samsung.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Schneider Electric.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Symphony AI.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Syngenta.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Tech Mahindra.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Tiger Analytics.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Titan.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Tredence.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Verizon.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/VuNet.jpg" loading="lazy"></div>
-              <div class="slide_1"><img src="assets/img/companylogo/Wipro.jpg" loading="lazy"></div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div class="section">
+        <h2>Explore Opportunities</h2>
+        <p>Join our diverse and vibrant community to achieve excellence.</p>
     </div>
-    <!-- Modal for more announcement -->
-    <div id="announcementModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">All Announcements / Updates</h5>
-                    <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"
-                            aria-hidden="true"></i></button>
-                </div>
-                <!-- Dyanamic data rendering -->
-                <div class="modal-body" style="max-height: 500px;overflow-y:scroll;" id="latest-updates-modal">
-                </div>
-            </div>
-        </div>
-    </div>
-<div
-  id="videoModal"
-  class="modal fade"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="videoModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">
-          <i class="fa fa-times" aria-hidden="true"></i>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="modalVideoContainer">
-          <iframe frameborder="0" allowfullscreen="" class="modalVideo"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    <footer id="footer" class="bg-primary py-3">
-      <div class="container-fluid">
-        <div class="h5 text-lighter">Contact Us</div>
-        <div class="row pt-2 pb-2">
-          <div class="col-sm-12 col-md-3 text-lighter">
-            <div class="d-flex footer-text">
-              <div style="flex-basis: 8%">
-                <img
-                  style="width: 1rem"
-                  src="assets/img/homepage/email.png"
-                />
-              </div>
-              <div style="flex-basis: 90%">
-                support@study.iitm.ac.in
-              </div>
-            </div>
-          </div>
 
-          <div class="col-sm-12 col-md-3 text-lighter">
-            <div class="d-flex footer-text">
-              <div style="flex-basis: 8%">
-                <img
-                  style="width: 1rem"
-                  src="assets/img/homepage/Footer%20icon-phone.svg"
-                />
-              </div>
-              <div style="flex-basis: 90%">
-                7850999966
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-4 text-lighter">
-          <div class="d-flex footer-text">
-            <div style="flex-basis: 8%">
-              <img
-                style="width: 1rem"
-                src="assets/img/homepage/location.png"
-              />
-            </div>
-            <div style="flex-basis: 90%">
-              IITM BS Degree Office, 3rd Floor, ICSR Building,<br />
-              IIT Madras, Chennai - 600036
-            </div>
-          </div>
-        </div>
-      </div>
-        <div class="row pt-2 pb-4 border-bottom justify-content-between">
-          <div class="col-sm-12 col-md-10 text-lighter">
-            <div class="d-flex footer-text">
-              <div style="flex-basis: 2%">
-                <img
-                  style="width: 1rem"
-                  src="/assets/img/homepage/info.png"
-                />
-              </div>       
-              <div style="flex-basis: 98%">
-                <span style="font-size: 0.7rem;line-height: 0.54rem;">Please use ONLY the above methods for any queries regarding the program.
-                  Our normal response time is 3 working days. It might take a little longer during busy periods.
-                  We will share Google Meet links during such periods.
-                  Due to the high volume of calls we receive every day, there might be long wait times.
-                  In some cases, you might have to call multiple times to successfully connect to us. 
-                 </span>
-              </div>
-            </div>
-          </div>
-          <div class="d-none d-md-block col-md-2 text-lighter align-self-end">
-            <div class="d-flex justify-content-end footer-text">
-              View Site Map
-            </div>
-            <div class="d-flex justify-content-end">
-              <small>© IIT Madras. All rights reserved.</small>
-            </div>
-          </div>
-          <div class="d-md-none footer-hidden col-md-12 pt-4">
-            <a
-              class="text-decoration-none"
-              href="https://www.facebook.com/iitmadrasbsdegree"
-              target="_blank"
-            >
-              <img
-                class="mr-1"
-                src="assets/img/homepage/Footer%20icon-facebook.svg"
-                alt="fb"
-                style="width: 2rem"
-              />
-            </a>
-            <a
-              class="text-decoration-none"
-              href="https://www.instagram.com/iitmadras_bs/"
-              target="_blank"
-            >
-              <img
-                class="mr-1"
-                src="assets/img/homepage/Footer%20icon-instagram.svg"
-                alt="ig"
-                style="width: 2rem"
-              />
-            </a>
-            <a
-              class="text-decoration-none"
-              href=" https://twitter.com/iitm_bs"
-              target="_blank"
-            >
-              <img
-                class="mr-1"
-                src="assets/img/homepage/Footer%20icon-twitter.svg"
-                alt="tw"
-                style="width: 2rem"
-              />
-            </a>
-            <a
-              class="text-decoration-none"
-              href="https://www.linkedin.com/company/iit-madras-bs-datascience-programme/"
-              target="_blank"
-            >
-              <img
-                class="mr-1"
-                src="assets/img/homepage/Footer%20icon-linkedin.svg"
-                alt="tw"
-                style="width: 2rem"
-              />
-            </a>
-            <a
-              class="text-decoration-none"
-              href="https://wa.me/message/IVROM2UN7XIJL1"
-              target="_blank"
-            >
-              <img
-                class="mr-1"
-                src="assets/img/homepage/Footer icon-whatsapp.svg"
-                alt="tw"
-                style="width: 2rem"
-              />
-            </a>
-          </div>
-        </div>
-        <div class="py-1 py-md-3 row justify-content-between">
-          <div class="d-none d-md-block col-md-6 pt-2">
-            <a
-              class="text-decoration-none"
-              href="https://www.facebook.com/iitmadrasbsdegree"
-              target="_blank"
-            >
-              <img
-                class="mr-1"
-                src="assets/img/homepage/Footer%20icon-facebook.svg"
-                alt="fb"
-                style="width: 2rem"
-              />
-            </a>
-            <a
-              class="text-decoration-none"
-              href="https://www.instagram.com/iitmadras_bs/"
-              target="_blank"
-            >
-              <img
-                class="mr-1"
-                src="assets/img/homepage/Footer%20icon-instagram.svg"
-                alt="ig"
-                style="width: 2rem"
-              />
-            </a>
-            <a
-              class="text-decoration-none"
-              href=" https://twitter.com/iitm_bs"
-              target="_blank"
-            >
-              <img
-                class="mr-1"
-                src="assets/img/homepage/Footer%20icon-twitter.svg"
-                alt="tw"
-                style="width: 2rem"
-              />
-            </a>
-            <a
-              class="text-decoration-none"
-              href="https://www.linkedin.com/company/iit-madras-bs-datascience-programme/"
-              target="_blank"
-            >
-              <img
-                class="mr-1"
-                src="assets/img/homepage/Footer%20icon-linkedin.svg"
-                alt="tw"
-                style="width: 2rem"
-              />
-            </a>
-            <a
-              class="text-decoration-none"
-              href="https://wa.me/message/IVROM2UN7XIJL1"
-              target="_blank"
-            >
-              <img
-                class="mr-1"
-                src="assets/img/homepage/Footer icon-whatsapp.svg"
-                alt="tw"
-                style="width: 2rem"
-              />
-            </a>
-          </div>
-          <div
-            class="col-sm-12 col-md-6 d-md-none footer-hidden footer-text-small text-lighter"
-          >
-            <div class="d-flex justify-content-md-end footer-text">
-              View Site Map
-            </div>
-            <div class="d-flex justify-content-md-end">
-              <small>© IIT Madras. All rights reserved.</small>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 d-flex justify-content-md-end">
-            <div class="text-lighter">
-              <span
-                class="footerLinks footer-text"
-                url="privacy_policy.html"
-                style="cursor: pointer"
-                >Privacy Policy</span
-              >
-              |
-              <span
-                class="footerLinks footer-text"
-                url="tos.html"
-                style="cursor: pointer"
-                >Terms of Service</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="section">
+        <h2>Campus Life</h2>
+        <p>Experience a blend of academics and extracurricular activities in a state-of-the-art campus.</p>
+    </div>
+
+    <!-- Sponsor Carousel -->
+    <div class="carousel">
+        <div class="slide"><img src="https://via.placeholder.com/150" alt="Sponsor 1"></div>
+        <div class="slide"><img src="https://via.placeholder.com/150" alt="Sponsor 2"></div>
+        <div class="slide"><img src="https://via.placeholder.com/150" alt="Sponsor 3"></div>
+        <div class="slide"><img src="https://via.placeholder.com/150" alt="Sponsor 4"></div>
+        <div class="slide"><img src="https://via.placeholder.com/150" alt="Sponsor 5"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 IITM. All rights reserved.</p>
     </footer>
-    
-
-    
-    <script type="text/javascript">
-        function scrollToTop() {
-            window.scrollTo(0, 0);
-        }
-        let scrollButton = document.getElementById('scrollToTop');
-        let submitButton = document.getElementById('submit');
-        let options = {"Andaman-and-Nicobar-Islands": ["Port Blair"], "Andhra-Pradesh": ["Adoni", "Amalapuram", "Amaravati", "Anakapalle", "Anantapur", "Bapatla", "Bheemunipatnam", "Bhimavaram", "Bobbili", "Chandragiri", "Chilakaluripet", "Chirala", "Chittoor", "Dharmavaram", "Dowlaiswaram", "Eluru", "Gooty", "Gudivada", "Gudur", "Guntakal", "Guntur", "Hindupur", "Jaggaiahpet", "Jammalamadugu", "Kadapa", "Kadiri", "Kakinada", "Kandukur", "Kavali", "Kovvur", "Kurnool", "Macherla", "Machilipatnam", "Madanapalle", "Mandapeta", "Markapur", "Nagari", "Nagarjunakonda", "Naidupet", "Nandyal", "Narasapuram", "Narasaraopet", "Narsipatnam", "Nellore", "Nidadavole", "Nuzvid", "Ongole", "Palacole", "Palasa Kasibugga", "Parvathipuram", "Pedana", "Peddapuram", "Pithapuram", "Ponnur", "Proddatur", "Punganur", "Puttur", "Rajahmundry", "Rajam", "Rajampet", "Ramachandrapuram", "Rayachoti", "Rayadurg", "Renigunta", "Repalle", "Salur", "Samalkot", "Sattenapalle", "Srikakulam", "Srikalahasti", "Srisailam Project (Right Flank Colony) Township", "Sullurpeta", "Tadepalligudem", "Tadpatri", "Tanuku", "Tenali", "Tirupati", "Tiruvuru", "Tuni", "Uravakonda", "Venkatagiri", "Vijayawada", "Vinukonda", "Visakhapatnam", "Vizianagaram", "Yemmiganur", "Yerraguntla"], "Arunachal-Pradesh": ["Itanagar", "Naharlagun", "Pasighat"], "Assam": ["Barpeta", "Bongaigaon City", "Dhubri", "Dibrugarh", "Diphu", "Dispur", "Goalpara", "Guwahati", "Jorhat", "Karimganj", "Lanka", "Lumding", "Mangaldoi", "Mankachar", "Margherita", "Mariani", "Marigaon", "Nagaon", "Nalbari", "North Lakhimpur", "Rangia", "Sibsagar", "Silapathar", "Silchar", "Tezpur", "Tinsukia"], "Bihar": ["Araria", "Arrah", "Arwal", "Asarganj", "Aurangabad", "Bagaha", "Barh", "Baruni", "Begusarai", "Bettiah", "Bhabua", "Bhagalpur", "Bihar Sharif", "Bodh Gaya", "Buxar", "Chhapra", "Darbhanga", "Dehri-on-Sone", "Dinapur Nizamat", "Dumraon", "Forbesganj", "Gaya", "Gopalganj", "Hajipur", "Jamalpur", "Jamui", "Jehanabad", "Katihar", "Kishanganj", "Lakhisarai", "Lalganj", "Madhepura", "Madhubani", "Maharajganj", "Mahnar Bazar", "Makhdumpur", "Maner", "Manihari", "Marhaura", "Masaurhi", "Mirganj", "Mokameh", "Motihari", "Motipur", "Munger", "Murliganj", "Muzaffarpur", "Narkatiaganj", "Naugachhia", "Nawada", "Nokha", "Patna", "Piro", "Purnia", "Pusa", "Rafiganj", "Rajgir", "Ramnagar", "Raxaul Bazar", "Revelganj", "Rosera", "Saharsa", "Samastipur", "Sasaram", "Sheikhpura", "Sheohar", "Sherghati", "Silao", "Sitamarhi", "Siwan", "Sonepur", "Sugauli", "Sultanganj", "Supaul", "Warisaliganj"], "Chandigarh": ["Chandigarh"], "Chhattisgarh": ["Ambikapur", "Bhatapara", "Bhilai Nagar", "Bilaspur", "Chirmiri", "Dalli-Rajhara", "Dhamtari", "Durg", "Jagdalpur", "Korba", "Mahasamund", "Manendragarh", "Mungeli", "Naila Janjgir", "Raigarh", "Raipur", "Rajnandgaon", "Sakti", "Tilda Newra"], "Dadra-and-Nagar-Haveli": ["Silvassa"], "Delhi": ["Delhi", "New Delhi"], "Goa": ["Mapusa", "Margao", "Marmagao", "Panaji"], "Gujarat": ["Adalaj", "Ahmedabad", "Amreli", "Anand", "Anjar", "Ankleshwar", "Bharuch", "Bhavnagar", "Bhuj", "Chhapra", "Deesa", "Dhoraji", "Dwarka", "Gandhinagar", "Godhra", "Jamnagar", "Junagadh", "Kadi", "Kandla", "Kapadvanj", "Keshod", "Khambhat", "Kheda", "Lathi", "Limbdi", "Lunawada", "Mahemdabad", "Mahesana", "Mahuva", "Manavadar", "Mandvi", "Mangrol", "Mansa", "Modasa", "Morvi", "Nadiad", "Navsari", "Okha", "Padra", "Palanpur", "Palitana", "Pardi", "Patan", "Petlad", "Porbandar", "Radhanpur", "Rajkot", "Rajpipla", "Rajula", "Ranavav", "Rapar", "Salaya", "Sanand", "Savarkundla", "Sidhpur", "Sihor", "Songadh", "Surat", "Surendranagar", "Talaja", "Thangadh", "Tharad", "Umbergaon", "Umreth", "Una", "Unjha", "Upleta", "Vadnagar", "Vadodara", "Valsad", "Vapi", "Veraval", "Vijapur", "Viramgam", "Visnagar", "Vyara", "Wadhwan", "Wankaner"], "Haryana": ["Ambala", "Bahadurgarh", "Bhiwani", "Charkhi Dadri", "Faridabad", "Fatehabad", "Firozpur Jhirka", "Gohana", "Gurgaon", "Hansi", "Hisar", "Jind", "Kaithal", "Karnal", "Kurukshetra", "Ladwa", "Mahendragarh", "Mandi Dabwali", "Narnaul", "Narwana", "Palwal", "Panchkula", "Panipat", "Pehowa", "Pinjore", "Rania", "Ratia", "Rewari", "Rohtak", "Safidon", "Samalkha", "Sarsod", "Shahbad", "Sirsa", "Sohna", "Sonipat", "Taraori", "Thanesar", "Tohana", "Yamunanagar"], "Himachal-Pradesh": ["Bilaspur", "Chamba", "Dalhousie", "Dharmshala", "Hamirpur", "Kangra", "Kullu", "Mandi", "Nahan", "Palampur", "Shimla", "Solan", "Sundarnagar", "Una"], "Jammu-and-Kashmir": ["Anantnag", "Baramula", "Doda", "Gulmarg", "Jammu", "Kathua", "Leh", "Punch", "Rajauri", "Sopore", "Srinagar", "Udhampur"], "Jharkhand": ["Adityapur", "Bokaro Steel City", "Chaibasa", "Chatra", "Chirkunda", "Deoghar", "Dhanbad", "Dumka", "Giridih", "Gumia", "Hazaribag", "Jamshedpur", "Jharia", "Jhumri Tilaiya", "Lohardaga", "Madhupur", "Medininagar (Daltonganj)", "Mihijam", "Musabani", "Pakaur", "Patratu", "Phusro", "Rajmahal", "Ramgarh", "Ranchi", "Sahibganj", "Saraikela", "Saunda", "Simdega", "Tenu dam-cum-Kathhara"], "Karnataka": ["Adyar", "Afzalpur", "Arsikere", "Athni", "Badami", "Ballari", "Belagavi", "Bengaluru", "Bhadravati", "Bidar", "Chikkamagaluru", "Chitradurga", "Davanagere", "Gokak", "Halebid", "Hassan", "Hubli-Dharwad", "Kalaburagi", "Karwar", "Kolar", "Lakshmeshwar", "Lingsugur", "Maddur", "Madhugiri", "Madikeri", "Magadi", "Mahalingapura", "Malavalli", "Malur", "Mandya", "Mangaluru", "Manvi", "Mudabidri", "Mudalagi", "Muddebihal", "Mudhol", "Mulbagal", "Mundargi", "Mysore", "Nanjangud", "Nargund", "Navalgund", "Nelamangala", "Pavagada", "Piriyapatna", "Puttur", "Raayachuru", "Rabkavi Banhatti", "Ramanagaram", "Ramdurg", "Ranebennuru", "Ranibennur", "Robertson Pet", "Ron", "Sadalagi", "Sagara", "Sakaleshapura", "Sanduru", "Sankeshwara", "Saundatti-Yellamma", "Savanur", "Sedam", "Shahabad", "Shahpur", "Shiggaon", "Shikaripur", "Shivamogga", "Shravanabelagola", "Shrirangapattana", "Sidlaghatta", "Sindagi", "Sindhagi", "Sindhnur", "Sira", "Sirsi", "Siruguppa", "Srinivaspur", "Surapura", "Talikota", "Tarikere", "Tekkalakote", "Terdal", "Tiptur", "Tumkur", "Udupi", "Vijayapura", "Wadi", "Yadgir"], "Kerala": ["Adoor", "Alappuzha", "Attingal", "Badagara", "Chalakudy", "Changanassery", "Cherthala", "Chittur-Thathamangalam", "Guruvayoor", "Idukki", "Kanhangad", "Kannur", "Kasaragod", "Kayamkulam", "Kochi", "Kodungallur", "Kollam", "Kottayam", "Koyilandy", "Kozhikode", "Kunnamkulam", "Malappuram", "Mattancheri", "Mattannur", "Mavelikkara", "Mavoor", "Muvattupuzha", "Nedumangad", "Neyyattinkara", "Nilambur", "Ottappalam", "Palai", "Palakkad", "Panamattom", "Panniyannur", "Pappinisseri", "Paravoor", "Pathanamthitta", "Peringathur", "Perinthalmanna", "Perumbavoor", "Ponnani", "Punalur", "Puthuppally", "Shoranur", "Taliparamba", "Thalassery", "Thiruvalla", "Thiruvananthapuram", "Thodupuzha", "Thrissur", "Tirur", "Vaikom", "Varkala", "Vatakara"], "Madhya-Pradesh": ["Alirajpur", "Ashok Nagar", "Balaghat", "Barwani", "Betul", "Bharhut", "Bhind", "Bhojpur", "Bhopal", "Burhanpur", "Chhatarpur", "Chhindwara", "Damoh", "Datia", "Dewas", "Dhar", "Ganjbasoda", "Guna", "Gwalior", "Hoshangabad", "Indore", "Itarsi", "Jabalpur", "Jhabua", "Khajuraho", "Khandwa", "Khargon", "Lahar", "Maharajpur", "Maheshwar", "Mahidpur", "Maihar", "Malaj Khand", "Manasa", "Manawar", "Mandideep", "Mandla", "Mandsaur", "Mauganj", "Mhow Cantonment", "Mhowgaon", "Morena", "Multai", "Mundi", "Murwara (Katni)", "Nagda", "Nainpur", "Narsimhapur", "Narsinghgarh", "Narwar", "Neemuch", "Nepanagar", "Niwari", "Nowgong", "Nowrozabad (Khodargama)", "Orchha", "Pachore", "Pali", "Panagar", "Pandhurna", "Panna", "Pasan", "Pipariya", "Pithampur", "Porsa", "Prithvipur", "Raghogarh-Vijaypur", "Rahatgarh", "Raisen", "Rajgarh", "Ratlam", "Rau", "Rehli", "Rewa", "Sabalgarh", "Sagar", "Sanawad", "Sarangpur", "Sarni", "Satna", "Sausar", "Sehore", "Sendhwa", "Seoni", "Seoni-Malwa", "Shahdol", "Shajapur", "Shamgarh", "Sheopur", "Shivpuri", "Shujalpur", "Sidhi", "Sihora", "Singrauli", "Sironj", "Sohagpur", "Tarana", "Tikamgarh", "Ujjain", "Umaria", "Vidisha", "Vijaypur", "Wara Seoni"], "Maharashtra": ["Achalpur", "Ahmednagar", "Akola", "Akot", "Amalner", "Ambejogai", "Amravati", "Anjangaon", "Arvi", "Aurangabad", "Bhandara", "Bhiwandi", "Bhusawal", "Bid", "Buldana", "Chandrapur", "Daulatabad", "Dhule", "Ichalkaranji", "Jalgaon", "Kalyan-Dombivali", "Karjat", "Karli", "Kolhapur", "Latur", "Loha", "Lonar", "Lonavla", "Mahabaleshwar", "Mahad", "Malegaon", "Malkapur", "Mangalvedhe", "Mangrulpir", "Manjlegaon", "Manmad", "Manwath", "Matheran", "Mehkar", "Mhaswad", "Mira-Bhayandar", "Morshi", "Mukhed", "Mul", "Mumbai", "Murtijapur", "Nagpur", "Nanded-Waghala", "Nandgaon", "Nandura", "Nandurbar", "Narkhed", "Nashik", "Nawapur", "Nilanga", "Osmanabad", "Ozar", "Pachora", "Paithan", "Palghar", "Pandharkaoda", "Pandharpur", "Panvel", "Parbhani", "Parli", "Partur", "Pathardi", "Pathri", "Patur", "Pauni", "Pen", "Phaltan", "Pulgaon", "Pune", "Purna", "Pusad", "Rahuri", "Rajura", "Ramtek", "Ratnagiri", "Raver", "Risod", "Sailu", "Sangamner", "Sangli", "Sangole", "Sasvad", "Satana", "Satara", "Savner", "Sawantwadi", "Sevagram", "Shahade", "Shegaon", "Shendurjana", "Shirdi", "Shirpur-Warwade", "Shirur", "Shrigonda", "Shrirampur", "Sillod", "Sinnar", "Solapur", "Soyagaon", "Talegaon Dabhade", "Talode", "Tasgaon", "Thane", "Tirora", "Tuljapur", "Tumsar", "Uchgaon", "Udgir", "Ulhasnagar", "Umarga", "Umarkhed", "Umred", "Uran", "Uran Islampur", "Vadgaon Kasba", "Vaijapur", "Vasai-Virar", "Vita", "Wadgaon Road", "Wai", "Wani", "Wardha", "Warora", "Warud", "Washim", "Yavatmal", "Yawal", "Yevla"], "Manipur": ["Imphal", "Lilong", "Mayang Imphal", "Thoubal"], "Meghalaya": ["Cherrapunji", "Nongstoin", "Shillong", "Tura"], "Mizoram": ["Aizawl", "Lunglei", "Saiha"], "Nagaland": ["Dimapur", "Kohima", "Mokokchung", "Mon", "Phek", "Tuensang", "Wokha", "Zunheboto"], "Odisha": ["Balangir", "Baleshwar Town", "Barbil", "Bargarh", "Baripada Town", "Bhadrak", "Bhawanipatna", "Bhubaneswar", "Brahmapur", "Byasanagar", "Cuttack", "Dhenkanal", "Jatani", "Jharsuguda", "Kendrapara", "Kendujhar", "Keonjhar", "Konark", "Koraput", "Malkangiri", "Nabarangapur", "Paradip", "Parlakhemundi", "Pattamundai", "Phulabani", "Puri", "Rairangpur", "Rajagangapur", "Raurkela", "Rayagada", "Sambalpur", "Soro", "Sunabeda", "Sundargarh", "Talcher", "Tarbha", "Titlagarh", "Udayagiri"], "Puducherry": ["Karaikal", "Mahe", "Pondicherry", "Yanam"], "Punjab": ["Amritsar", "Barnala", "Batala", "Bathinda", "Dhuri", "Faridkot", "Fazilka", "Firozpur", "Firozpur Cantt.", "Gobindgarh", "Gurdaspur", "Hoshiarpur", "Jagraon", "Jalandhar", "Jalandhar Cantt.", "Kapurthala", "Khanna", "Kharar", "Kot Kapura", "Longowal", "Ludhiana", "Malerkotla", "Malout", "Mansa", "Moga", "Mohali", "Morinda, India", "Mukerian", "Muktsar", "Nabha", "Nakodar", "Nangal", "Nawanshahr", "Pathankot", "Patiala", "Patti", "Pattran", "Phagwara", "Phillaur", "Qadian", "Raikot", "Rajpura", "Rampura Phul", "Rupnagar", "Samana", "Sangrur", "Sirhind Fatehgarh Sahib", "Sujanpur", "Sunam", "Talwara", "Tarn Taran", "Urmar Tanda", "Zira", "Zirakpur"], "Rajasthan": ["Abu", "Ajmer", "Alwar", "Amer", "Barmer", "Beawar", "Bharatpur", "Bhilwara", "Bikaner", "Bundi", "Chittaurgarh", "Churu", "Dhaulpur", "Dungarpur", "Ganganagar", "Hanumangarh", "Jaipur", "Jaisalmer", "Jalor", "Jhalawar", "Jhunjhunu", "Jodhpur", "Kishangarh", "Kota", "Lachhmangarh", "Ladnu", "Lakheri", "Lalsot", "Losal", "Makrana", "Malpura", "Mandalgarh", "Mandawa", "Mangrol", "Merta City", "Mount Abu", "Nadbai", "Nagar", "Nagaur", "Nasirabad", "Nathdwara", "Neem-Ka-Thana", "Nimbahera", "Nohar", "Nokha", "Pali", "Phalodi", "Phulera", "Pilani", "Pilibanga", "Pindwara", "Pipar City", "Prantij", "Pratapgarh", "Pushkar", "Raisinghnagar", "Rajakhera", "Rajaldesar", "Rajgarh (Alwar)", "Rajgarh (Churu)", "Rajsamand", "Ramganj Mandi", "Ramngarh", "Ratangarh", "Rawatbhata", "Rawatsar", "Reengus", "Sadri", "Sadulpur", "Sadulshahar", "Sagwara", "Sambhar", "Sanchore", "Sangaria", "Sardarshahar", "Sawai Madhopur", "Shahpura", "Sheoganj", "Sikar", "Sirohi", "Sojat", "Sri Madhopur", "Sujangarh", "Sumerpur", "Suratgarh", "Takhatgarh", "Taranagar", "Todabhim", "Todaraisingh", "Tonk", "Udaipur", "Udaipurwati", "Vijainagar, Ajmer"], "Sikkim": ["Gangtok", "Gyalsing", "Lachung", "Mangan"], "Tamil-Nadu": ["Arakkonam", "Arcot", "Aruppukkottai", "Chengalpattu", "Chennai", "Chidambaram", "Coimbatore", "Cuddalore", "Dharmapuri", "Dindigul", "Erode", "Gobichettipalayam", "Kancheepuram", "Kanniyakumari", "Karur", "Kodaikanal", "Kumbakonam", "Lalgudi", "Madurai", "Mamallapuram", "Manachanallur", "Nagapattinam", "Nagercoil", "Namagiripettai", "Namakkal", "Nandivaram-Guduvancheri", "Nanjikottai", "Natham", "Nellikuppam", "Neyveli (TS)", "O\u0027 Valley", "Oddanchatram", "P.N.Patti", "Pacode", "Padmanabhapuram", "Palani", "Palayankottai", "Palladam", "Pallapatti", "Pallikonda", "Panagudi", "Panruti", "Paramakudi", "Parangipettai", "Pattukkottai", "Perambalur", "Peravurani", "Periyakulam", "Periyasemur", "Pernampattu", "Pollachi", "Polur", "Ponneri", "Pudukkottai", "Pudupattinam", "Puliyankudi", "Punjaipugalur", "Rajapalayam", "Ramanathapuram", "Rameshwaram", "Ranipet", "Rasipuram", "Salem", "Sankarankovil", "Sankari", "Sathyamangalam", "Sattur", "Shenkottai", "Sholavandan", "Sholingur", "Sirkali", "Sivaganga", "Sivagiri", "Sivakasi", "Srivilliputhur", "Surandai", "Suriyampalayam", "Tenkasi", "Thammampatti", "Thanjavur", "Tharamangalam", "Tharangambadi", "Theni Allinagaram", "Thirumangalam", "Thirupuvanam", "Thiruthuraipoondi", "Thiruvallur", "Thiruvarur", "Thoothukudi", "Thuraiyur", "Tindivanam", "Tiruchendur", "Tiruchengode", "Tiruchirappalli", "Tirukalukundram", "Tirukkoyilur", "Tirunelveli", "Tirupathur", "Tiruppur", "Tiruttani", "Tiruvannamalai", "Tiruvethipuram", "Tittakudi", "Udhagamandalam", "Udumalaipettai", "Unnamalaikadai", "Usilampatti", "Uthamapalayam", "Uthiramerur", "Vadakkuvalliyur", "Vadalur", "Vadipatti", "Valparai", "Vandavasi", "Vaniyambadi", "Vedaranyam", "Vellakoil", "Vellore", "Vikramasingapuram", "Viluppuram", "Virudhachalam", "Virudhunagar", "Viswanatham"], "Telangana": ["Adilabad", "Bellampalle", "Bhadrachalam", "Bhainsa", "Bhongir", "Bodhan", "Farooqnagar", "Gadwal", "Hyderabad", "Jagtial", "Jangaon", "Kagaznagar", "Kamareddy", "Karimnagar", "Khammam", "Koratla", "Kothagudem", "Kyathampalle", "Mahbubnagar", "Mancherial", "Mandamarri", "Manuguru", "Medak", "Miryalaguda", "Nagarkurnool", "Narayanpet", "Nirmal", "Nizamabad", "Palwancha", "Ramagundam", "Sadasivpet", "Sangareddy", "Siddipet", "Sircilla", "Suryapet", "Tandur", "Vikarabad", "Wanaparthy", "Warangal", "Yellandu"], "Tripura": ["Agartala", "Belonia", "Dharmanagar", "Kailasahar", "Khowai", "Pratapgarh", "Udaipur"], "Uttar-Pradesh": ["Achhnera", "Agra", "Aligarh", "Allahabad", "Amroha", "Ayodhya", "Azamgarh", "Bahraich", "Ballia", "Banda", "Bara Banki", "Bareilly", "Basti", "Bijnor", "Bithur", "Budaun", "Bulandshahr", "Chandausi", "Deoria", "Etah", "Etawah", "Faizabad", "Farrukhabad-cum-Fatehgarh", "Fatehpur", "Fatehpur Sikri", "Firozabad", "Ghaziabad", "Ghazipur", "Gonda", "Gorakhpur", "Hamirpur", "Hapur", "Hardoi", "Hathras", "Jalaun", "Jaunpur", "Jhansi", "Kalpi", "Kannauj", "Kanpur", "Khair", "Laharpur", "Lakhimpur", "Lal Gopalganj Nindaura", "Lalganj", "Lalitpur", "Lar", "Loni", "Lucknow", "Mainpuri", "Mathura", "Meerut", "Mirzapur-Vindhyachal", "Modinagar", "Moradabad", "Muzaffarnagar", "Nagina", "Najibabad", "Nakur", "Nanpara", "Naraura", "Naugawan Sadat", "Nautanwa", "Nawabganj", "Nehtaur", "Niwai", "Noida", "Noorpur", "Obra", "Orai", "Padrauna", "Palia Kalan", "Parasi", "Partapgarh", "Phulpur", "Pihani", "Pilibhit", "Pilkhuwa", "Powayan", "Prayagraj", "Pukhrayan", "Puranpur", "Purquazi", "Purwa", "Rae Bareli", "Rampur", "Rampur Maniharan", "Rasra", "Rath", "Renukoot", "Reoti", "Robertsganj", "Rudauli", "Rudrapur", "Sadabad", "Safipur", "Saharanpur", "Sahaspur", "Sahaswan", "Sahawar", "Sahjanwa", "Saidpur", "Sambhal", "Samdhan", "Samthar", "Sandi", "Sandila", "Sardhana", "Seohara", "Shahabad, Hardoi", "Shahabad, Rampur", "Shahganj", "Shahjahanpur", "Shamli", "Shamsabad, Agra", "Shamsabad, Farrukhabad", "Sherkot", "Shikarpur, Bulandshahr", "Shikohabad", "Shishgarh", "Siana", "Sikanderpur", "Sikandra Rao", "Sikandrabad", "Sirsaganj", "Sirsi", "Sitapur", "Soron", "Suar", "Sultanpur", "Sumerpur", "Tanda", "Tehri", "Thakurdwara", "Thana Bhawan", "Tilhar", "Tirwaganj", "Tulsipur", "Tundla", "Ujhani", "Unnao", "Utraula", "Varanasi", "Vrindavan", "Warhapur", "Zaidpur", "Zamania"], "Uttarakhand": ["Almora", "Bageshwar", "Dehradun", "Haldwani-cum-Kathgodam", "Hardwar", "Kashipur", "Manglaur", "Mussoorie", "Nagla", "Nainital", "Pauri", "Pithoragarh", "Ramnagar", "Rishikesh", "Roorkee", "Rudrapur", "Sitarganj", "Srinagar", "Tehri"], "West-Bengal": ["Adra", "Alipore", "Alipurduar", "Arambagh", "Asansol", "Baharampur", "Bally", "Balurghat", "Bankura", "Baranagar", "Barasat", "Barrackpore", "Basirhat", "Bhatpara", "Bishnupur", "Budge Budge", "Burdwan", "Chandernagore", "Darjiling", "Diamond Harbour", "Dum Dum", "Durgapur", "English Bazar", "Gangarampur", "Habra", "Halisahar", "Haora", "Hugli-Chinsurah", "Jalpaiguri", "Jhargram", "Kalimpong", "Kamarhati", "Kanchrapara", "Kharagpur", "Koch Bihar", "Kolkata", "Krishnanagar", "Mainaguri", "Malda", "Mathabhanga", "Medinipur", "Memari", "Monoharpur", "Murshidabad", "Nabadwip", "Naihati", "Palashi", "Panchla", "Pandua", "Panihati", "Paschim Punropara", "Purulia", "Raghunathganj", "Raghunathpur", "Raiganj", "Rampurhat", "Ranaghat", "Sainthia", "Santipur", "Shantiniketan", "Siliguri", "Sonamukhi", "Srirampore", "Suri", "Taki", "Tamluk", "Tarakeswar", "Titagarh"], "countries": ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo (Congo-Brazzaville)", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czechia (Czech Republic)", "C\u00f4te d\u0027Ivoire", "Democratic Republic of the Congo", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini (fmr. \"Swaziland\")", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Holy See", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar (formerly Burma)", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Palestine State", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"], "state-keys": ["Andaman-and-Nicobar-Islands", "Andhra-Pradesh", "Arunachal-Pradesh", "Assam", "Bihar", "Chandigarh", "Chhattisgarh", "Dadra-and-Nagar-Haveli", "Delhi", "Goa", "Gujarat", "Haryana", "Himachal-Pradesh", "Jammu-and-Kashmir", "Jharkhand", "Karnataka", "Kerala", "Madhya-Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Puducherry", "Punjab", "Rajasthan", "Sikkim", "Tamil-Nadu", "Telangana", "Tripura", "Uttar-Pradesh", "Uttarakhand", "West-Bengal"], "states": ["Andaman and Nicobar Islands", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chandigarh", "Chhattisgarh", "Dadra and Nagar Haveli", "Delhi", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Puducherry", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"]};
-
-        // Add Custom Margin for the main content
-        window.addEventListener('DOMContentLoaded', function () {
-            let fixed = document.getElementById("fixedTop");
-            const marginTop = window.getComputedStyle(fixed).getPropertyValue("height");
-            let styles = `
-                p:target::before {
-                    content: "";
-                      display: block;
-                      height: ${marginTop}; /* fixed header height*/
-                      margin: -${marginTop} 0 0; /* negative fixed header height */
-                }
-                h2:target::before {
-                    content: "";
-                      display: block;
-                      height: ${marginTop}; /* fixed header height*/
-                      margin: -${marginTop} 0 0; /* negative fixed header height */
-                }
-                div:target::before {
-                    content: "";
-                      display: block;
-                      height: ${marginTop}; /* fixed header height*/
-                      margin: -${marginTop} 0 0; /* negative fixed header height */
-                }
-                `
-            document.getElementById("mainContent").style.marginTop = marginTop;
-            let styleSheet = document.createElement("style")
-            styleSheet.type = "text/css"
-            styleSheet.innerText = styles
-            document.head.appendChild(styleSheet);
-        })
-        window.onload = function () {
-            if (!submitButton) {
-                return;
-            }
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollButton.style.display = "block";
-            } else {
-                scrollButton.style.display = "none";
-            }
-            submitButton.disabled = true;
-        }
-
-        // adding  marginTop to anchor elements
-        window.onresize = function () {
-            let fixed = document.getElementById("fixedTop");
-            const marginTop = window.getComputedStyle(fixed).getPropertyValue("height");
-            let styles = `
-                p:target::before {
-                    content: "";
-                      display: block;
-                      height: ${marginTop}; /* fixed header height*/
-                      margin: -${marginTop} 0 0; /* negative fixed header height */
-                }
-                h2:target::before {
-                    content: "";
-                      display: block;
-                      height: ${marginTop}; /* fixed header height*/
-                      margin: -${marginTop} 0 0; /* negative fixed header height */
-                }
-                div:target::before {
-                    content: "";
-                      display: block;
-                      height: ${marginTop}; /* fixed header height*/
-                      margin: -${marginTop} 0 0; /* negative fixed header height */
-                }`
-            document.getElementById("mainContent").style.marginTop = marginTop;
-            let styleSheet = document.createElement("style")
-            styleSheet.type = "text/css"
-            styleSheet.innerText = styles
-            document.head.appendChild(styleSheet)
-        }
-
-
-        // Checking if to show scroll to top button
-        window.onscroll = function () {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollButton.style.display = "block";
-            } else {
-                scrollButton.style.display = "none";
-            }
-        }
-    </script>
-    <!--   Core JS Files   -->
-    <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
-    <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
-    <script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-    <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-    <script src="assets/js/plugins/bootstrap-switch.js"></script>
-    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-    <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
-    <script src="assets/js/plugins/moment.min.js"></script>
-    <script src="assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
-    <script src="assets/js/plugins/bootstrap-datepicker.min.js"></script>
-    <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
-    <script src="assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script>
-
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="assets/js/custom/google-language-translator.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script async src="https://static.addtoany.com/menu/page.js"></script>
-
-    <!-- Custom -->
-    <script src="assets/js/custom/sheets-api.js"></script>
-    <!--<script src="assets/js/custom/index.js"></script>-->
-    <script src="assets/js/custom/video-modal.js"></script>
- <!-- NEW SCRIPT-->
- <script>
-    let slideIndex = 0;
-    showSlides();
-    
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
-    }
-  </script>
-  
-  <!--youtube video sliding-->
-  <script>
-    let slideIndex1 = 1;
-    showSlides1(slideIndex1);
-    
-    function plusSlides1(n) {
-      showSlides1(slideIndex1 += n);
-    }
-    
-    function currentSlide1(n) {
-      showSlides1(slideIndex1 = n);
-    }
-    
-    function showSlides1(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides1");
-      var dots = document.getElementsByClassName("dot1");
-      if (n > slides.length) {slideIndex1 = 1}    
-      if (n < 1) {slideIndex1 = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex1-1].style.display = "block";  
-      dots[slideIndex1-1].className += " active";
-    }
-    </script>
-    
-<!---youtube video stop-->
-<script type="text/javascript">
-$('a.stop-video').click(function(){
- $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
- $('.youtube-video')[1].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
- $('.youtube-video')[2].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
-});
-</script>
-  </body>
+</body>
 </html>
