@@ -1,6 +1,17 @@
+/* Catppuccin Theme Colors */
+:root {
+    --catppuccin-mocha: #1e1e2e;
+    --catppuccin-latte: #f5e0dc;
+    --catppuccin-frappe: #f2cdcd;
+    --catppuccin-macchiato: #f28fad;
+    --catppuccin-text: #cdd6f4;
+    --catppuccin-accent: #a6e3a1;
+    --catppuccin-muted: #6c7086;
+}
+
 /* Caption text */
 .text {
-    color: #f2f2f2;
+    color: var(--catppuccin-text);
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
@@ -22,6 +33,7 @@
     font-weight: 800;
     line-height: 2.9375rem;
     text-align: center;
+    color: var(--catppuccin-text);
 }
 
 .fontag3 {
@@ -30,25 +42,26 @@
     font-weight: 600;
     line-height: 1.3333333333rem;
     letter-spacing: .0233333333rem;
-    color: black;
+    color: var(--catppuccin-text);
 }
 
 .fonts {
     font-size: 3vw;
+    color: var(--catppuccin-text);
 }
 
 .dot1 {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: var(--catppuccin-muted);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .active {
-    background-color: #717171;
+    background-color: var(--catppuccin-accent);
 }
 
 @keyframes fade {
@@ -60,7 +73,7 @@
     }
 }
 
-/* Corosal container */
+/* Carousel container */
 .mySlides {
     display: inline;
     height: 100%;
@@ -88,7 +101,7 @@
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: var(--catppuccin-muted);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -113,7 +126,7 @@
     width: auto;
     padding-right: 16px;
     margin-top: -22px;
-    color: white;
+    color: var(--catppuccin-text);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -128,7 +141,7 @@
 
 .active,
 .dot:hover {
-    background-color: #717171;
+    background-color: var(--catppuccin-accent);
 }
 
 .fade1 {
@@ -153,7 +166,7 @@
     }
 }
 
-/*sponcer logo slider*/
+/* Sponsor logo slider */
 .slider_1:before {
     left: 0;
     top: 0;
@@ -167,7 +180,7 @@
 
 .slider_1:after,
 .slider_1:before {
-    background: linear-gradient(to right);
+    background: linear-gradient(to right, var(--catppuccin-mocha), var(--catppuccin-latte));
     content: "";
     height: 75pt;
     position: absolute;
