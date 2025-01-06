@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IITM - Inspired by Excellence</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="icon" href="https://study.iitm.ac.in/ds/assets/img/logo.ico" type="image/x-icon">
+    <style>
+        :root {
+            --primary-maroon: #993333;
+            --primary-gold: #D4AF37;
+            --background-beige: #993333;
+            --background-gray: #800000;
+            --accent-red: #B35747;
+            --accent-yellow: #FFE6B3;
+            --accent-brown: #4D2E1C;
+            --text-dark-brown: #3C2F27;
+            --text-maroon: #e8e8e8;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: var(--background-beige);
+            color: var(--text-dark-brown);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--background-gray);
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .navbar li {
+            position: relative;
+        }
+
+        .navbar a {
+        text-decoration: none;
+        color: var(--text-maroon); /* A lighter shade for default text */
+        font-weight: 600;
+        }
+
+        .navbar a:hover {
+        color: var(--text-dark-brown); /* Darker color on hover */
+}
+
+
+        .navbar li:hover > ul {
+            display: block;
+            animation: slide-down 0.3s ease-out;
+        }
+
+        
+        .navbar ul ul {
+            display: none;
+            position: absolute;
+            background: var(--accent-yellow); /* Change this variable to your desired color */
+            padding: 1rem;
+            list-style: none;
+            top: 100%; /* Position directly below the navbar */
+            left: 0;
+            border-radius: 5px;
+            width: 200px; /* Adjust width if necessary */
+        }
+
+    
+
+        @keyframes slide-down {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .navbar ul ul li {
+            margin: 0;
+        }
+
+        .hero {
+            margin-top: 4rem; /* Prevent overlap with fixed navbar */
+            position: relative;
+            height: calc(100vh - 4rem);
+            overflow: hidden;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero .background-gif {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 1;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--text-maroon);
+            height: 100%;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .button {
+            background: var(--accent-yellow);
+            color: var(--text-dark-brown);
+            padding: 0.8rem 1.5rem;
+            font-weight: 600;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .carousel {
+            background-color: var(--primary-maroon);
+            padding: 2rem 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel h2 {
+            color: var(--accent-yellow);
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .carousel-content {
+            display: flex;
+            gap: 1rem;
+            animation: scroll 20s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .carousel img {
+            max-width: 100px;
+            border-radius: 8px;
+        }
+
+        .section {
+            padding: 2rem;
+            text-align: center;
+            background-color: var(--accent-red);
+            margin: 2rem auto;
+            border-radius: 10px;
+            color: var(--accent-yellow);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: var(--background-gray);
+            color: var(--text-maroon);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://study.iitm.ac.in/ds/assets/img/logo.ico" alt="IITM Logo">
+            <span style="color: var(--primary-gold); font-weight: bold; font-size: 1.2rem;">IITM</span>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Academics</a>
+                <ul>
+                    <li><a href="#">Term Structure</a></li>
+                    <li><a href="#">Course Registrations</a></li>
+                    <li><a href="#">Assessments</a></li>
+                    <li><a href="#">Exam Cities</a></li>
+                    <li><a href="#">Fee Structure</a></li>
+                    <li><a href="#">Foundation Level</a></li>
+                    <li><a href="#">Diploma Level</a></li>
+                    <li><a href="#">BSc Degree Level</a></li>
+                    <li><a href="#">BS Degree Level</a></li>
+                    <li><a href="#">Sample Certificates</a></li>
+                    <li><a href="#">Academic Calendar</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Admissions</a>
+                <ul>
+                    <li><a href="#">Important Dates</a></li>
+                    <li><a href="#">Mandatory Requirements</a></li>
+                    <li><a href="#">Eligibility to Apply</a></li>
+                    <li><a href="#">Application Process</a></li>
+                    <li><a href="#">Regular Entry</a></li>
+                    <li><a href="#">JEE-based Entry</a></li>
+                    <li><a href="#">International Students</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="#">Help Videos</a></li>
+                    <li><a href="#">In the Media</a></li>
+                    <li><a href="#">Archive</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Student Life</a>
+                <ul>
+                    <li><a href="#">Student Houses & Societies</a></li>
+                    <li><a href="#">Student Festivals</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Achievements</a>
+                <ul>
+                    <li><a href="#">Toppers Page</a></li>
+                    <li><a href="#">Student's Best Projects</a></li>
+                    <li><a href="#">Teaching Assistance</a></li>
+                    <li><a href="#">Alumni</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Research and Publication</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About IITM</a>
+                <ul>
+                    <li><a href="#">About IIT Madras</a></li>
+                    <li><a href="#">Faculty Coordinators</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Merchandise</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Partnerships</a></li>
+            <li><a href="#">Placements</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop>
+            <source src="assets/videos/hero-background.mp4" type="video/mp4">
+        </video>
+        <img src="assets/images/students-studying.gif" alt="Students Studying" class="background-gif">
+        <div class="hero-content">
+            <h1>Welcome to IITM</h1>
+            <p>Excellence in Education, Research, and Innovation</p>
+            <a href="#contact" class="button">Join Us</a>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="section">
+        <h2>Our Vision</h2>
+        <p>To create a nurturing environment for innovation and research.</p>
+    </section>
+
+    <!-- Opportunities Section -->
+    <section class="section" style="background-color: var(--primary-gold); color: var(--text-maroon);">
+        <h2>Explore Opportunities</h2>
+        <p>Join our diverse and vibrant community to achieve excellence.</p>
+    </section>
+
+    <!-- Campus Life Section -->
+    <section class="section">
+        <h2>Campus Life</h2>
+        <p>Experience a blend of academics and extracurricular activities in a state-of-the-art campus.</p>
+    </section>
+
+    <!-- Sponsor Carousel -->
+    <div class="carousel">
+        <h2>Our Partners</h2>
+        <div class="carousel-content">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/ABP%20Network.jpg" alt="Sponsor 1">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Aditya%20Birla.jpg" alt="Sponsor 2">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Amazon.jpg" alt="Sponsor 3">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Bharat%20Forge.jpg" alt="Sponsor 4">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Capgemini.jpg" alt="Sponsor 5">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Cargill.jpg" alt="Sponsor 6">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Cisco.jpg" alt="Sponsor 7">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Cognizant.jpg" alt="Sponsor 8">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Course5i.jpg" alt="Sponsor 9">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Delhivery.jpg" alt="Sponsor 10">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Deloitte.jpg" alt="Sponsor 11">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/DRDO.jpg" alt="Sponsor 12">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Dun%20%26%20Bradstreet.jpg" alt="Sponsor 13">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Ecolab.jpg" alt="Sponsor 14">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Epsilon.jpg" alt="Sponsor 15">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Ernst%20and%20Young.jpg" alt="Sponsor 16">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Ford%20Motor.jpg" alt="Sponsor 17">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Gavs%20Technology.jpg" alt="Sponsor 18">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Genpact.jpg" alt="Sponsor 19">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/HCL%20Tech.jpg" alt="Sponsor 20">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/HP.jpg" alt="Sponsor 21">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Indian%20Oil%20Corporation.jpg" alt="Sponsor 22">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Intel%20Corporation.jpg" alt="Sponsor 23">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/L%26T.jpg" alt="Sponsor 24">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Latentview%20Analytics.jpg" alt="Sponsor 25">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Logitech.jpg" alt="Sponsor 26">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Lowes%20India.jpg" alt="Sponsor 27">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Marlabs.jpg" alt="Sponsor 28">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Medi%20Assist.jpg" alt="Sponsor 29">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Microsoft.jpg" alt="Sponsor 30">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Myntra.jpg" alt="Sponsor 31">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Natwest%20Group.jpg" alt="Sponsor 32">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Oracle.jpg" alt="Sponsor 33">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Pidilite%20Industries%20Limited.jpg" alt="Sponsor 34">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Rakuten%20India.jpg" alt="Sponsor 35">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/sabio_logo.jpg" alt="Sponsor 36">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Saint%20Gobain.jpg" alt="Sponsor 37">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Samsung.jpg" alt="Sponsor 38">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Schneider%20Electric.jpg" alt="Sponsor 39">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Symphony%20AI.jpg" alt="Sponsor 40">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Syngenta.jpg" alt="Sponsor 41">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Tech%20Mahindra.jpg" alt="Sponsor 42">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Tiger%20Analytics.jpg" alt="Sponsor 43">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Titan.jpg" alt="Sponsor 44">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Tredence.jpg" alt="Sponsor 45">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Verizon.jpg" alt="Sponsor 46">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/VuNet.jpg" alt="Sponsor 47">
+            <img src="https://study.iitm.ac.in/ds/assets/img/companylogo/Wipro.jpg" alt="Sponsor 48">
+        </div>
+    </div>
+<footer>
+        <p>&copy; 2024 IITM. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
+   

@@ -157,22 +157,25 @@ body {
 .carousel .slide {
     display: inline-block;
     padding: 0 20px;
-    animation: scroll 30s linear infinite alternate;
+    animation: infinitescroll 60s linear infinite;
+}
+
+.carousel .slide-track {
+    display: inline-block;
 }
 
 .carousel img {
     height: 50px;
     max-width: 100%;
-    display: block;
-    margin: 0 auto;
+    display: inline-block;
+    margin: 0 20px;
 }
 
-@keyframes scroll {
-    from {
+@keyframes infinitescroll {
+    0% {
         transform: translateX(0);
     }
-
-    to {
+    100% {
         transform: translateX(-4000%);
     }
 }
